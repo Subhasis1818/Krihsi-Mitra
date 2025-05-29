@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Mitra</title>
+    <link rel="stylesheet" href="cfront.css">
+</head>
+<body>
+   
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome To Krishi Mitra </h1>
+                <p>Rooted In Care</p>
+               
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Choose a section</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Disease Detection</h3>
+                        <p>Find the disease of the plant</p>
+                        <a href="index.html" class="feature-link">Explore →</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Seed Selection</h3>
+                        <p>Find the best compatible seed</p>
+                        <a href="indexseed.html" class="feature-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
