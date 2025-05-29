@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Identification</title>
+    <link rel="stylesheet" href="c.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    KRISHI MITRA
+                </h1>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="identification-card">
+                <div class="card-header">
+                    <h2>Identify Crop Disease</h2>
+                </div>
+                <form class="disease-form" id="diseaseForm">
+                    <div class="form-group">
+                        <label for="plant">Plant Type </label>
+                        <div class="input-wrapper">
+                            <input type="text" id="plant" name="plant" placeholder="Enter plant name..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms"> What symptoms are you seeing?</label>
+                        <div class="input-wrapper">
+                            <textarea id="symptoms" name="symptoms" placeholder="Describe the symptoms you observe..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">How long have the symptoms been present?</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="duration" name="duration" placeholder="Enter duration..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="factors">Environmental Factors</label>
+                        <div class="input-wrapper">
+                            <textarea id="factors" name="factors" placeholder="Describe environmental conditions (humidity, temperature, rainfall, etc.)..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Identify Disease</button>
+                </form>
+                <div class="results-section" id="resultsSection" style="display: none;">
+                    <div class="result-card">
+                        <div class="disease-info">
+                            <h3>Disease Information</h3>
+                            <div class="info-text" id="diseaseInfo">          
+                            </div>
+                        </div>
+
+                        <div class="management-section">
+                            <h4>Management Recommendations</h4>
+                            <div class="management-text" id="managementInfo">
+                            </div>
+                        </div>
+
+                        <div class="prevention-section">
+                            <h4>Prevention Tips</h4>
+                            <div class="prevention-text" id="preventionInfo">
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button type="button" class="action-btn secondary" id="newDiagnosisBtn">
+                                New Diagnosis
+                            </button>
+                            <button type="button" class="action-btn primary" id="generateReportBtn">
+                                Generate Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>How It Works</h3>
+                <p></p>
+            </div>
+            <div class="info-card">
+                <h3>Expert Support</h3>
+                <p></p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
