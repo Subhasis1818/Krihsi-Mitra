@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Seed Recommendation System</title>
+    <link rel="stylesheet" href="cseed.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container1">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    Seed Finder
+                </h1>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="en" class="op-1">English</option>
+                        <option value="hi" class="op-2">हिन्दी</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="identification-card">
+                <div class="card-header">
+                    <h2>Seed Recommendation</h2>
+                </div>
+                
+                <form class="disease-form" id="seedForm">
+                    <div class="form-group">
+                        <label for="crop">
+                            Which plant do you want to grow?
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="text" id="crop" name="crop" placeholder="Enter plant name (e.g., wheat, rice, corn, tomato)..." required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="soilType">
+                            What is your soil type?
+                        </label>
+                        <div class="input-wrapper">
+                            <select id="soilType" name="soilType" required>
+                                <option value="">Select Soil Type</option>
+                                <option value="red">Red Soil</option>
+                                <option value="black">Black Soil</option>
+                                <option value="alluvial">Alluvial Soil</option>
+                                <option value="sandy">Sandy Soil</option>
+                                <option value="clay">Clay Soil</option>
+                                <option value="loamy">Loamy Soil</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="month">
+                            What is your sowing month?
+                        </label>
+                        <div class="input-wrapper">
+                            <select id="month" name="month" required>
+                                <option value="">Select Month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferences">
+                            Select your priorities:
+                        </label>
+                        <div class="input-wrapper preferences-wrapper">
+                            <label class="container">
+                                High Yield
+                                <input type="checkbox" id="highYield" value="High Yield" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                Disease Resistance
+                                <input type="checkbox" id="diseaseResistance" value="Disease Resistance">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                Drought Tolerance
+                                <input type="checkbox" id="droughtTolerance" value="Drought Tolerance">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Get AI Recommendations
+                    </button>
+                </form>
+                
+                <div class="result-section" id="resultSection" style="display: none;">
+                    <div class="result-card">
+                        <div class="seed-recommendation">
+                            <h3>Recommended Seeds</h3>
+                            <div class="seed-info" id="seedInfo"></div>
+                        </div>
+
+                        <div class="description-section">
+                            <h4>Detailed Recommendation</h4>
+                            <div class="description-text" id="descriptionInfo"></div>
+                        </div>
+
+                        <div class="additional-info">
+                            <h4>Growing Tips</h4>
+                            <div class="tips-text" id="tipsInfo"></div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button type="button" class="action-btn secondary" id="newRecommendationBtn">
+                                New Recommendation
+                            </button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>AI-Powered Recommendations</h3>
+                <p>Our advanced AI analyzes your specific conditions to recommend the highest yielding seed varieties for your farm.</p>
+            </div>
+            <div class="info-card">
+                <h3>Maximize Productivity</h3>
+                <p>Get scientifically-backed seed recommendations tailored to your soil type, climate, and farming goals.</p>
+            </div>
+            
+        </section>
+    </div>
+    
+    <script src="script1.js"></script>
+</body>
+</html>
